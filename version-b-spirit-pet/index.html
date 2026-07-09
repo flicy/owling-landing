@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>灵偶 OWLING — 孵化你自己的小精灵</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="灵偶 OWLING：每个孩子都有一只属于自己的学习精灵。它从一颗蛋开始，被你的声音唤醒，被你的故事喂养，陪你一起学英语。">
+    <meta property="og:title" content="灵偶 OWLING — 孵化你自己的小精灵">
+    <meta property="og:description" content="每个孩子都有一只属于自己的学习精灵。它从一颗蛋开始，被你的声音唤醒，被你的故事喂养。">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥚</text></svg>">
     <style>
         *, *::before, *::after {
             margin: 0;
@@ -38,7 +40,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', sans-serif;
             background: var(--bg-deep);
             color: var(--text-primary);
             line-height: 1.7;
@@ -906,7 +908,16 @@
                 gap: 16px;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .fade-up { opacity: 1; transform: none; transition: none; }
+            .hero-egg, .baby-spirit .spirit-icon, .cta-section .cta-icon,
+            .naming-ui .egg-crack, .scroll-cta .arrow, .spirits-meeting .sparkles,
+            .hero-egg::before, .hero-egg::after { animation: none; }
+        }
     </style>
+    <noscript><style>.fade-up { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
 
@@ -1047,7 +1058,7 @@
                 <div class="evo-card fade-up">
                     <span class="evo-icon">🌟</span>
                     <div class="evo-level">LV.30+</div>
-                    <div class="evo-name">灵魂期</div>
+                    <div class="evo-name">共创期</div>
                     <div class="evo-desc">独特性格<br>共创故事<br>跨精灵社交</div>
                 </div>
             </div>
@@ -1060,8 +1071,8 @@
     <section class="memory">
         <div class="container">
             <div class="section-label fade-up">记忆水晶</div>
-            <h2 class="section-title fade-up">它记得你的一切</h2>
-            <p class="section-desc fade-up">每段对话变成一颗水晶，储存在它的记忆宝库里。</p>
+            <h2 class="section-title fade-up">它记得你们的故事</h2>
+            <p class="section-desc fade-up">每段对话变成一颗水晶，储存在你们共同的记忆宝库里。家长可以随时查看和删除。</p>
 
             <div class="crystal-grid fade-up">
                 <div class="crystal">
@@ -1161,7 +1172,7 @@
             <div class="section-label fade-up">精灵社交</div>
             <h2 class="section-title fade-up">让它交个朋友</h2>
             <p class="section-desc fade-up">两只精灵碰碰鼻子，就成了朋友。</p>
-            <p class="section-desc fade-up">它们会一起冒险、一起学英语、互相串门讲故事。伙伴等级越高，能一起解锁的副本越多。</p>
+            <p class="section-desc fade-up">它们会一起冒险、一起学英语、互相串门讲故事。一起玩得越久，能共同创作的故事越多。</p>
 
             <div class="social-visual fade-up">
                 <div class="spirits-meeting">
@@ -1172,7 +1183,7 @@
                 <div class="social-features">
                     <div class="social-feat">🗺️ 一起冒险</div>
                     <div class="social-feat">📖 互相讲故事</div>
-                    <div class="social-feat">🏆 组队解锁副本</div>
+                    <div class="social-feat">🏆 组队故事冒险</div>
                     <div class="social-feat">💌 跨精灵串门</div>
                 </div>
             </div>
@@ -1188,7 +1199,7 @@
             <div class="safety-grid">
                 <div class="safety-item fade-up">
                     <span class="safety-icon">🔒</span>
-                    <span class="safety-label">本地语音<br>隐私优先</span>
+                    <span class="safety-label">隐私优先<br>数据可查可删</span>
                 </div>
                 <div class="safety-item fade-up">
                     <span class="safety-icon">👑</span>

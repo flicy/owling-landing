@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>灵偶 OWLING — 种下第一棵树，陪它一起长大</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="灵偶 OWLING：一只会说话的玩偶，一棵记录成长的故事树。每天的对话变成记忆叶子，陪孩子在故事里自然学英语。">
+<meta property="og:title" content="灵偶 OWLING — 种下第一棵树，陪它一起长大">
+<meta property="og:description" content="一只会说话的玩偶，一棵记录成长的故事树。每天的对话变成记忆叶子，陪孩子在故事里自然学英语。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌳</text></svg>">
 <style>
 *, *::before, *::after {
   box-sizing: border-box;
@@ -35,7 +37,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', sans-serif;
   background: var(--cream);
   color: var(--text-primary);
   line-height: 1.7;
@@ -692,7 +694,13 @@ body {
     max-width: 90%;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+}
 </style>
+<noscript><style>.fade-in { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
 
@@ -930,7 +938,7 @@ body {
       </div>
       <div class="companion-feature">
         <span class="emoji">⭐</span>
-        <span>伙伴等级越高，能解锁的共同冒险越多</span>
+        <span>一起长大 — 陪伴越久，共同的冒险故事越多</span>
       </div>
     </div>
   </div>
@@ -944,8 +952,8 @@ body {
     <div class="safety-grid fade-in fade-in-delay-2">
       <div class="safety-item">
         <div class="icon">🔒</div>
-        <div class="label">本地语音处理</div>
-        <div class="desc">语音数据不上云</div>
+        <div class="label">隐私优先设计</div>
+        <div class="desc">数据最小化收集，加密存储</div>
       </div>
       <div class="safety-item">
         <div class="icon">👨‍👩‍👧</div>
@@ -986,7 +994,7 @@ body {
 <!-- 11. Footer -->
 <footer class="footer">
   <div class="footer-logo">灵偶 OWLING · 探月黑客松作品</div>
-  <p class="footer-tagline">不只是玩具，是陪你长大的朋友。</p>
+  <p class="footer-tagline">不只是玩具，是陪你长大的学习伙伴。</p>
 </footer>
 
 <script>

@@ -75,7 +75,7 @@ owling-landing/
 
 ## 技术栈
 
-- 纯 HTML / CSS / JS，单文件部署
-- Google Fonts (Inter)
-- IntersectionObserver 滚动动画
+- 纯 HTML / CSS / JS，单文件部署，无外部依赖
+- 系统字体栈（PingFang SC / Microsoft YaHei 等，国内访问无阻塞）
+- IntersectionObserver 滚动动画（含 prefers-reduced-motion 与 noscript 降级）
 - 响应式设计（移动端适配）

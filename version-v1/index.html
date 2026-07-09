@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>灵偶 OWLING — 陪你长大的朋友</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>灵偶 OWLING — 陪你长大的学习伙伴</title>
+<meta name="description" content="灵偶 OWLING：一个会记住孩子每一天的 AI 学习伙伴。实时语音对话、成长记忆、英语启蒙，用故事和陪伴代替枯燥练习。">
+<meta property="og:title" content="灵偶 OWLING — 陪你长大的学习伙伴">
+<meta property="og:description" content="实时语音对话 · 成长记忆 · 英语启蒙。一个会记住孩子每一天的 AI 学习伙伴。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
 <style>
 *, *::before, *::after {
   margin: 0;
@@ -39,7 +42,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
   background: var(--cream);
   color: var(--text-primary);
   line-height: 1.6;
@@ -714,7 +717,13 @@ footer .footer-logo {
   .dashboard-items { grid-template-columns: 1fr; }
   .safety-grid { grid-template-columns: 1fr; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+}
 </style>
+<noscript><style>.fade-in { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
 
@@ -736,7 +745,7 @@ footer .footer-logo {
 <section class="hero">
   <div class="hero-plush fade-in">🧸</div>
   <h1 class="fade-in fade-in-delay-1">灵偶 <span class="highlight">OWLING</span></h1>
-  <p class="tagline fade-in fade-in-delay-2">不只是玩具，是陪你长大的朋友</p>
+  <p class="tagline fade-in fade-in-delay-2">不只是玩具，是陪你长大的学习伙伴</p>
   <p class="subtitle fade-in fade-in-delay-3">
     实时语音对话 · 成长记忆 · 英语启蒙<br>
     一个会记住孩子每一天的 AI 伙伴，用故事和陪伴代替枯燥练习
@@ -941,8 +950,8 @@ footer .footer-logo {
     <div class="safety-grid">
       <div class="safety-item fade-in fade-in-delay-1">
         <div class="safety-icon">🔒</div>
-        <h4>本地语音处理</h4>
-        <p>隐私优先，核心数据不出设备</p>
+        <h4>隐私优先设计</h4>
+        <p>数据最小化收集，加密存储传输</p>
       </div>
       <div class="safety-item fade-in fade-in-delay-2">
         <div class="safety-icon">👁️</div>
@@ -976,7 +985,6 @@ footer .footer-logo {
       <p>体验 AI 伙伴如何用温度和记忆，重新定义儿童英语启蒙</p>
       <div class="cta-buttons">
         <a href="http://mbp.liaoxingyi.com/" target="_blank" class="btn-primary">体验 Demo →</a>
-        <a href="#" class="btn-secondary">加入等候名单</a>
       </div>
     </div>
   </div>
@@ -985,7 +993,7 @@ footer .footer-logo {
 <!-- Footer -->
 <footer>
   <div class="footer-logo">灵偶 OWLING</div>
-  <p>© 2025 灵偶 OWLING. 用 AI 陪伴，让成长被看见。</p>
+  <p>© 2026 灵偶 OWLING. 用 AI 陪伴，让成长被看见。</p>
 </footer>
 
 <script>
