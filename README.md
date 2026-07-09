@@ -67,7 +67,7 @@ owling-landing/
 ## 协作
 
 - 直接改对应目录下的 `index.html`
-- 每个版本是单文件 HTML（内联 CSS + JS），无外部依赖
+- 每个版本是一个 HTML（内联 CSS + JS）+ `assets/` 本地配图，无外部依赖
 - 文档在 `docs/` 目录，随时补充更新
 - PR 或直接 push 均可
 
@@ -75,7 +75,8 @@ owling-landing/
 
 ## 技术栈
 
-- 纯 HTML / CSS / JS，单文件部署，无外部依赖
+- 纯 HTML / CSS / JS，每版一个页面 + 本地 assets 配图，无外部 CDN 依赖
+- AI 生成品牌配图（统一的猫头鹰玩偶形象，位于各版本 assets/ 目录）
 - 系统字体栈（PingFang SC / Microsoft YaHei 等，国内访问无阻塞）
 - IntersectionObserver 滚动动画（含 prefers-reduced-motion 与 noscript 降级）
 - 响应式设计（移动端适配）

@@ -179,18 +179,23 @@ nav .nav-cta:hover {
 }
 
 .hero-plush {
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(135deg, #FFE4CC 0%, #FFF0E0 50%, #E8F8F2 100%);
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
   margin-bottom: 40px;
-  box-shadow: 0 20px 60px rgba(245,169,98,0.15);
+  box-shadow: 0 20px 60px rgba(245,169,98,0.25);
   animation: float 6s ease-in-out infinite;
   position: relative;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+.hero-plush img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 18% center;
 }
 
 .hero-plush::after {
@@ -777,7 +782,9 @@ footer .footer-logo {
 
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-plush fade-in">🧸</div>
+  <div class="hero-plush fade-in">
+    <img src="assets/hero-owl.jpg" alt="灵偶毛绒猫头鹰玩偶" width="440" height="440">
+  </div>
   <h1 class="fade-in fade-in-delay-1">灵偶 <span class="highlight">OWLING</span></h1>
   <p class="tagline fade-in fade-in-delay-2">不只是玩具，是陪你长大的学习伙伴</p>
   <p class="subtitle fade-in fade-in-delay-3">
