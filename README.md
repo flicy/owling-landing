@@ -32,13 +32,24 @@ owling-landing/
 ├── version-v1/
 │   └── index.html              # V1：功能导向基础版
 │
-└── docs/
-    ├── 00-project-brief-zh.md          # 项目简报：定位、用户、核心功能
-    ├── 01-社媒文案.md                   # 小红书 + 朋友圈召集用户文案
-    ├── 02-AI儿童陪伴硬件合规要点.md      # 国内外合规法案整理（中/美/欧）
-    ├── 03-hackathon-agent-spec-zh.md   # 黑客松执行规格：Demo剧本、MVP清单、数据结构
-    ├── 04-open-questions-zh.md         # 未决问题与验证点
-    └── 视频脚本-灵偶角色介绍.md          # 角色介绍视频脚本（7/10 拍摄）
+├── docs/
+│   ├── 00-project-brief-zh.md          # 项目简报
+│   ├── 01-社媒文案.md                   # 小红书 + 朋友圈召集用户文案
+│   ├── 02-AI儿童陪伴硬件合规要点.md      # 国内外合规法案整理（中/美/欧）
+│   ├── 03-hackathon-agent-spec-zh.md   # 黑客松执行规格
+│   ├── 04-open-questions-zh.md         # 未决问题与验证点
+│   ├── 视频脚本-灵偶角色介绍.md          # 角色介绍视频脚本（7/10 拍摄）
+│   │
+│   └── codex-research/                 # Codex 调研原始资料（中英双语）
+│       ├── README.md                   # 资料夹说明 + 阅读顺序
+│       ├── AGENTS.md                   # Agent 工作规则与项目边界
+│       ├── 00-project-brief-*.md       # 项目简报
+│       ├── 01-conversation-digest-*.md # 对话整理（产品主线、建议汇总）
+│       ├── 02-transcript-insights-*.md # 逐字稿洞察（三份材料要点）
+│       ├── 03-hackathon-agent-spec-*.md# 黑客松执行规格
+│       └── 04-open-questions-*.md      # 未决问题与验证点
+│
+└── (其他协作文件)
 ```
 
 ---
@@ -61,6 +72,19 @@ owling-landing/
 - 硬件端：毛绒玩偶（灵偶），孩子的对话入口
 - 小朋友软件端：Pad / 儿童手表，展示记忆叶子、故事树、兴趣地图
 - 家长软件端：APP 面板 + 主动提醒卡片/短信
+
+---
+
+## 调研背景
+
+完整的项目调研资料在 `docs/codex-research/` 目录，包含：
+- 三份线下交流逐字稿的洞察提取
+- 产品定义、用户画像、核心价值
+- 黑客松可执行 Demo 范围与剧本
+- 商业/合规/技术风险点
+- 未决问题清单
+
+建议阅读顺序见 `docs/codex-research/README.md`。
 
 ---
 
