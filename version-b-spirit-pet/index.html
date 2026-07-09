@@ -39,6 +39,17 @@
             scroll-behavior: smooth;
         }
 
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0;
+            background: linear-gradient(90deg, var(--purple), var(--blue), var(--gold));
+            z-index: 200;
+            transition: width 0.1s linear;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', sans-serif;
             background: var(--bg-deep);
@@ -835,6 +846,24 @@
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 24px var(--purple-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 45%;
+            height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover::after {
+            left: 130%;
         }
 
         .btn-primary:hover {
@@ -915,11 +944,14 @@
             .hero-egg, .baby-spirit .spirit-icon, .cta-section .cta-icon,
             .naming-ui .egg-crack, .scroll-cta .arrow, .spirits-meeting .sparkles,
             .hero-egg::before, .hero-egg::after { animation: none; }
+            .btn-primary::after { display: none; }
         }
     </style>
     <noscript><style>.fade-up { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
+
+    <div class="progress" id="progress"></div>
 
     <!-- HERO -->
     <section class="hero">
@@ -1258,6 +1290,13 @@
         document.querySelectorAll('.fade-up').forEach(el => {
             observer.observe(el);
         });
+
+        // Scroll progress
+        const progressEl = document.getElementById('progress');
+        window.addEventListener('scroll', () => {
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            progressEl.style.width = (docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0) + '%';
+        }, { passive: true });
     </script>
 </body>
 </html>

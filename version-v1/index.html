@@ -73,6 +73,18 @@ body {
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
 
+/* Scroll progress */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--mint), var(--orange), var(--purple));
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
 /* Navigation */
 nav {
   position: fixed;
@@ -247,6 +259,24 @@ nav .nav-cta:hover {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::after {
+  left: 130%;
 }
 
 .btn-primary:hover {
@@ -721,11 +751,15 @@ footer .footer-logo {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .fade-in { opacity: 1; transform: none; transition: none; }
+  .hero-plush { animation: none; }
+  .btn-primary::after { display: none; }
 }
 </style>
 <noscript><style>.fade-in { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
+
+<div class="progress" id="progress"></div>
 
 <!-- Navigation -->
 <nav>
@@ -1013,18 +1047,15 @@ document.querySelectorAll('.fade-in').forEach(el => {
   observer.observe(el);
 });
 
-// Smooth nav background on scroll
+// Smooth nav background + scroll progress
 const nav = document.querySelector('nav');
-let lastScroll = 0;
+const progressEl = document.getElementById('progress');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  if (currentScroll > 50) {
-    nav.style.borderBottomColor = 'rgba(0,0,0,0.08)';
-  } else {
-    nav.style.borderBottomColor = 'rgba(0,0,0,0.04)';
-  }
-  lastScroll = currentScroll;
+  nav.style.borderBottomColor = currentScroll > 50 ? 'rgba(0,0,0,0.08)' : 'rgba(0,0,0,0.04)';
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  progressEl.style.width = (docHeight > 0 ? (currentScroll / docHeight) * 100 : 0) + '%';
 }, { passive: true });
 </script>
 </body>
